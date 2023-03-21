@@ -47,12 +47,12 @@ export default function LockerPlugin(){
             console.log(error);
         }
     }
-    let stateMountLocker = false
+    // let stateMountLocker = false
     useEffect(()=>{
-        if (stateMountLocker) {
+        // if (stateMountLocker) {
             lockerDataFunction()
-        }
-        stateMountLocker = true
+        // }
+        // stateMountLocker = true
 
     },[])
     return(
