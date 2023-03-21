@@ -1,8 +1,9 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -46,24 +47,539 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.mise_en_page_container{
-  border: 1px solid red;
+.App{
+  font-family: 'PT Sans', sans-serif;
 }
-.navbar_container a{
-  background: royalblue;
-  display: inline-block;
-  width: 120px;
-  height: 25px;
-  font-weight: bold;
-  text-transform: capitalize;
-  color:white;
-  margin-right: 10px;
-  padding: 15px;
-  text-decoration: none;
+
+
+/* Button */
+/* Button */
+  /* ButtonLink */
+  /* .link_green {
+		box-shadow:inset 0px 1px 0px 0px #90d171;
+  	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  	background-color:#77b55a;
+  	border-radius:4px;
+  	border:1px solid #4b8f29;
+  	display:block;
+  	cursor:pointer;
+  	color: white;
+  	font-family:Arial;
+  	font-size:13px;
+  	font-weight:bold;
+  	padding:6px 12px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #5b8a3c;
+  }
+  .link_green:hover {
+  	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  	background-color:#72b352;
+  }
+  .link_green:active {
+  	position:relative;
+  	top:1px;
+  } */
+  .link_red {
+  	box-shadow:inset 0px 1px 0px 0px #cf866c;
+  	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  	background-color:#d0451b;
+  	border-radius:4px;
+  	border:1px solid #942911;
+  	display:block;
+  	cursor:pointer;
+  	color:#ffffff;
+    font-weight: bold;
+  	font-family:Arial;
+  	font-size:13px;
+  	padding:6px 12px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #854629;
+  }
+  .link_red:hover {
+  	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  	background-color:#bc3315;
+  }
+  .link_red:active {
+  	position:relative;
+  	top:1px;
+  }
+
+	.link_green {
+		box-shadow:inset 0px 1px 0px 0px #90d171;
+		background:linear-gradient(to bottom, #77b55a 5%, #5b9440 100%);
+		background-color:#77b55a;
+		border-radius:4px;
+		border:1px solid #4b8f29;
+		display:block;
+		cursor:pointer;
+		color:#ffffff;
+		font-weight: bold;
+		font-family:Arial;
+		font-size:13px;
+		padding:6px 12px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #854629;
+	}
+	.link_green:hover {
+		background:linear-gradient(to bottom, #5b9440 5%, #77b55a 100%);
+		background-color:#72b352;
+	}
+	.link_green:active {
+		position:relative;
+		top:1px;
+	}
+  /* ButtonLink */
+/* Button */
+/* Button */
+
+
+/* HomePage */
+/* HomePage */
+	.home_container{
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #ECECEC;
+		flex-direction: column;
+		background-size: cover;
+	}
+	.enc_logo{
+		width: 100px;
+		height: 150px;
+		position: relative;
+	}
+	.enc_logo img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+/* HomePage */
+/* HomePage */
+
+
+/* LOGFORM */
+/* LOGFORM */
+	.log_form{
+		padding: 10px;
+		border-radius: 5px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+	.field_log{
+		display: flex;
+		align-items: center;
+	}
+	.field_log input{
+		border: 1px solid rgba(255, 0, 0, 0);
+		background: rgba(255, 0, 0, 0);
+	}
+	.field_log input:focus-visible{
+		border: 1px solid rgba(255, 0, 0, 0);
+		outline: blue;
+	}
+	.enc_field_icon{
+		width: 28px;
+		height: 28px;
+		position: relative;
+	}
+	.enc_field_icon img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	.log_form_line{
+		margin-top: 5px;
+		margin-bottom: 15px;
+		height: 1px;
+		width: 100%;
+		background: #75B458;
+	}
+	.valid_entry{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.valid_entry p{
+		font-size: 11px;
+		cursor: pointer;
+	}
+/* LOGFORM */
+/* LOGFORM */
+
+/* LOADER */
+/* LOADER */
+.custom-loader {
+  --d:11px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  color: #75B458;
+  box-shadow:
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 0.5px,
+    calc(0*var(--d))      calc(1*var(--d))     0 1px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 1.5px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 2.5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 3px;
+  animation: s7 1s infinite steps(8);
+}
+
+@keyframes s7 {
+  100% {transform: rotate(1turn)}
+}
+	.log_loader_container{
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.result_log_form{
+		background: #ECECEC;
+		border-radius: 5px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 30px;
+		position: relative;
+	}
+	.close_log_modal{
+		color: white;
+		background: red;
+		border-radius: 100%;
+		position: absolute;
+		font-weight: bold;
+		height: 18px;
+		width: 18px;
+		top: -5px;
+		right: -5px;
+		display: flex;
+		cursor: pointer;
+		justify-content: center;
+		align-items: center;
+	}
+	.close_log_modal p{
+		transform: translateY(-2px) translateX(-0px);
+	}
+/* LOADER */
+/* LOADER */
+
+/* Navigation */
+/* Navigation */
+	.navigation{
+		background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  	background-color:#77b55a;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		z-index: 900;
+	}
+	.enc_leaf{
+		width: 36px;
+		height: 36px;
+		position: relative;
+		padding: 10px
+
+	}
+	.enc_leaf img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	.userboard{
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-right: 20px;
+	}
+	.utilisateur{
+		color: white;
+		text-transform: capitalize;
+	}
+	.menu{
+		position: fixed;
+		left: -1px;
+		height: 100vh;
+		border: 1px solid lightgrey;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+	.menu_content{
+		padding-top: 55px;
+		height: 100vh;
+		display: flex;
+		background: #ECECEC;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.PluginLink{
+			width: 120px;
+			color: #5E9742;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #77b55a;
+			cursor: pointer;
+	}
+	.Doc{
+		width: 120px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		background-color: #77b55a;
+		color: white;
+		margin-bottom: 56px;
+		cursor: pointer;
+	}
+	.Doc p{
+		margin-left: 15px;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: capitalize;
+
+	}
+
+	.PluginLink p{
+		margin-left: 15px;
+		font-weight: bold;
+		text-transform: capitalize;
+
+	}
+	.PluginLink:hover{
+		background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  	background-color:#77b55a;
+		color: white;
+	}
+	.menu_content a{
+		text-decoration: none;
+	}
+	.menu_plugin a {
+		width: 120px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #77b55a;
+		color: white;
+		margin-bottom: 56px;
+		cursor: pointer;
+	}
+/* Navigation */
+/* Navigation */
+
+/* PLUGIN */
+/* PLUGIN */
+	.plugin_container{
+		min-height: 100vh;
+		background: #ECECEC;
+		width: 100%;
+	}
+	.plugin_brik{
+		height: 56px;
+	}
+	.plugin_box{
+		margin-left: 120px;
+		padding: 45px;
+	}
+	.title_plugin{
+		position: absolute;
+		top: 56px;
+		left: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+		background-color:#77b55a;
+		width: 120px;
+		height: 51px;
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+	}
+	.content_plugin{
+		margin-top: 60px;
+	}
+	.content_box{
+		padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-bottom: 25px;
+	}
+	.field_plugin{
+		height: 25px;
+		border: 1px solid #77b55a;
+		width: 20vw;
+		border-radius: 3px;
+		padding-left: 3px;
+		background: rgba(255, 0, 0, 0);
+	}
+/* PLUGIN */
+/* PLUGIN */
+
+/* PLUGIN SALARIE */
+/* PLUGIN SALARIE */
+	.tips{
+		font-size: 12px;
+		margin-top: 3px;
+		font-style: italic;
+	}
+	.create_salarie_form{
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.modal_salarie{
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: 120px;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.modal_salarie_content{
+		background: #ECECEC;
+		border-radius: 5px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 30px;
+		position: relative;
+		transform: translateX(-60px);
+	}
+	.preloader_salarie{
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.salarie_line{
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid #77b55a;
+	}
+	.salarie_element{
+		flex: 1;
+		height: 50px;
+		display: flex;
+		align-items: center;
+	}
+	.salarie_element h2{
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+	.bgspc{
+		background: #77b55a;
+		color: white;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+	.spcel{
+		height: 24px;
+		border-right: 1px solid white;
+	}
+	.butSal{
+		justify-content: flex-end;
+		gap: 10px;
+		border-right: 1px solid rgba(255, 0, 0, 0);
+	}
+
+/* PLUGIN SALARIE */
+/* PLUGIN SALARIE */
+
+/* MANAGER */
+/* MANAGER */
+	.screen_manager{
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #ECECEC;
+	}
+	.enc_logo_manager{
+		width: 25vw;
+		height: 40vw;
+		position: relative;
+		transform: translateX(60px);
+	}
+	.enc_logo_manager img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+/* MANAGER */
+/* MANAGER */
+
+/* Locker Plugin */
+/* Locker Plugin */
+.locker_container{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	position: relative;
+	align-items: flex-start;
+}
+.enc_locker{
+	position: relative;
+	border-radius: 100%;
+	overflow: hidden;
+	width: 85px;
+	height: 85px;
+}
+
+.enc_locker img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.add_locker_container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5)
+}
+.add_locker_form{
+	background: white;
+	padding: 15px;
+	border-radius: 5px;
+}
+.add_locker_line{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.add_locker_btnline{
+	display: flex;
+	justify-content: space-between;
+}
+.add_locker_zone{
+	display: flex;
+	justify-content: space-between;
+}
+.add_lck{
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
 
 }
-.test{
-  border: 1px solid red;
-  height: 150px;
-  width: 20px;
+.locknom{
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0);
 }
+.icon_locker{
+	margin-left: 25px;
+	margin-right: 25px;
+}
+/* Locker Plugin */
+/* Locker Plugin */
