@@ -20,17 +20,16 @@ export default function UpdateLocker({updateData, closeUpdateLocker}){
         updateLockerData(e.target[0].value, e.target[2].value)
         closeUpdateLocker()
     }
-    let mountState = false
+    // let mountState = false
     useEffect(()=>{
         console.log('MOUNT TES');
-        if (mountState) {
+        // if (mountState) {
             loadLockerData()
 
-        }
-        mountState = true
+        // }
+        // mountState = true
     },[])
-    const test = ()=>{
-    }
+
     return(
         <div>
             {isEmpty(oneLockerData) ? "" : 
